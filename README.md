@@ -287,7 +287,7 @@ Conducted under a professional engagement. Data published here has been **anonym
 ## Author
 
 **Veronica C. Serrano**
-Civil Engineer — MSc Structural Engineering
+M.Sc. Civil Engineer — Structures and Materials  
 Data Analysis | SHM | Python Pipelines | Applied Engineering
 
 [GitHub](https://github.com/vcserrano248) · [Portfolio](https://vcserrano248.github.io)
