@@ -232,39 +232,15 @@ With only 28% valid data due to connectivity failures, S09 was neither excluded 
 
 ## Quantitative Results
 
-### Data Availability & Cleaning Pipeline
+> **Note on sensor labels:** This table uses anonymized identifiers (S01–S12 / Zone A–C). See [The Structure](#the-structure).
 
-> **Note on sensor labels:** Images use original project identifiers (DI-001 through DI-012), corresponding to S01–S12 / Zone A–C in the published code. See [The Structure](#the-structure).
+![Table 1: Raw Data Summary](assets/tables/table_00_raw_data_summary.png)
 
-![Data availability and cleaning results per sensor](assets/tables/table_01_valid_records.png)
+- **Zone A** retains 91–97% of registered values with zero values removed by the cleaning pipeline — cleanest signal in the system.
+- **Zone B** shows the most fragmented data: S06 and S05 retain only 57–62% of total timestamps, driven by a December 2025 connectivity outage confirmed by simultaneous gaps across all four zone sensors.
+- **S09 (Zone C, diagonal)** is the critical outlier: 71.94% of its values removed, leaving only 28% valid data and an IQR of 9,809 mm — orders of magnitude above all other sensors. Retained as a reference node only.
 
-- **Zone A** retains 91–97% of registered values with zero IQR eliminations — cleanest signal in the system.
-- **Zone B** retains only 57–62% of total timestamps on two sensors, driven by a December 2025 connectivity outage confirmed by simultaneous gaps across all four zone sensors.
-- **S09 (Zone C)** had 71.94% of values eliminated — retained as reference node only.
-
----
-
-### Clean Data — Displacement Statistics
-
-Statistics after full Chauvenet + IQR cleaning. "Movimiento Promedio" = mean relative displacement from structural minimum. CV = coefficient of variation — primary metric for cross-zone comparability independent of absolute magnitude.
-
-![Clean data statistical summary per sensor](assets/tables/table_02_clean_summary.png)
-
-- Zone A has the lowest standard deviations (1.07–1.85 mm) — highest structural predictability in the system.
-- S08 (Zone B, horizontal): highest average movement (5.24 mm) with the lowest CV (28.3%) — moves significantly but with extreme rhythmic consistency, the primary thermal expansion absorption point in Zone B.
-- S11 (Zone C, diagonal): highest total movement (10.97 mm) and highest CV (74.98%) — the most dynamically loaded and least predictable point in the system.
-
----
-
-### Movement Range Distribution by Percentile Band
-
-Four bands per sensor: 50% central (IQR — daily structural baseline), 90% central (seasonal variation), 95% central (engineering operational limit), 100% total (historical maximum). These bands directly define the alert thresholds.
-
-![Consolidated movement ranges by percentile band](assets/tables/table_03_movement_ranges.png)
-
-- IQR band (50% central) ranges 1.00–2.88 mm across all sensors — the structural "heartbeat" under normal daily conditions.
-- P95 band serves as the **Yellow Alert threshold**: exceeding it triggers a nocturnal return verification.
-- S11 shows the largest P95→P100 gap (9.07 mm → 10.97 mm), confirming its peak displacements are genuine structural events, not noise.
+> Full statistical analysis, displacement summaries, and movement range distributions in [ANALYSIS_REPORT.md](ANALYSIS_REPORT.md)
 
 ---
 
