@@ -256,7 +256,7 @@ With only 28% valid data due to connectivity failures, S09 was neither excluded 
 
 ## Data Confidentiality
 
-Conducted under a professional engagement. Data published here has been **anonymized**: client and location references removed, sensor identifiers relabeled (S01–S12), zone labels generalized (Zone A / B / C). A representative data sample is provided; the full dataset is not public. Methodology, code, and results are fully representative of the original work.
+Data published here has been **anonymized**. A representative data sample is provided. Methodology, code, and results work as a representation of the original work.
 
 ---
 
