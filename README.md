@@ -15,9 +15,9 @@
 | [Technical Stack](#technical-stack) | Tools and libraries used |
 | [Pipeline Architecture](#pipeline-architecture) | End-to-end data flow from raw CSVs to results |
 | [Notebooks Guide](#notebooks-guide) | What each notebook does and what it showcases |
+| [Quantitative Results](#quantitative-results) | Tables: cleaning outcomes and displacement statistics |
 | [Key Engineering Decisions](#key-engineering-decisions-in-the-analysis) | The judgment calls behind the methodology |
 | [Key Results](#key-results) | Main findings and structural diagnosis |
-| [Quantitative Results](#quantitative-results) | Tables: cleaning outcomes and displacement statistics |
 | [What This Project Demonstrates](#what-this-project-demonstrates) | Skills and competencies illustrated |
 | [Data Confidentiality](#data-confidentiality) | Anonymization approach |
 
@@ -190,6 +190,20 @@ Each notebook is a self-contained pipeline stage, designed to run sequentially.
 
 ---
 
+## Quantitative Results
+
+> **Note on sensor labels:** This table uses anonymized identifiers (S01–S12 / Zone A–C). See [The Structure](#the-structure).
+
+![Table 1: Raw Data Summary](assets/tables/table_00_raw_data_summary.png)
+
+- **Zone A** retains 91–97% of registered values with zero values removed by the cleaning pipeline — cleanest signal in the system.
+- **Zone B** shows the most fragmented data: S06 and S05 retain only 57–62% of total timestamps, driven by a December 2025 connectivity outage confirmed by simultaneous gaps across all four zone sensors.
+- **S09 (Zone C, diagonal)** is the critical outlier: 71.94% of its values removed, leaving only 28% valid data and an IQR of 9,809 mm — orders of magnitude above all other sensors. Retained as a reference node only.
+
+> Full statistical analysis, displacement summaries, and movement range distributions in [ANALYSIS_REPORT.md](ANALYSIS_REPORT.md)
+
+---
+
 ## Key Engineering Decisions in the Analysis
 
 ### 1. Three-phase cleaning strategy
@@ -227,20 +241,6 @@ With only 28% valid data due to connectivity failures, S09 was neither excluded 
 | Daily recovery window | 04:00–06:00 AM consistently across all sensors |
 | Thermal lag confirmed | Displacement peaks trail temperature peaks → thermal inertia of masonry mass |
 | Zone C morning anomaly | Abrupt increase at 08:00–10:30 AM → operational load superimposed on solar heating |
-
----
-
-## Quantitative Results
-
-> **Note on sensor labels:** This table uses anonymized identifiers (S01–S12 / Zone A–C). See [The Structure](#the-structure).
-
-![Table 1: Raw Data Summary](assets/tables/table_00_raw_data_summary.png)
-
-- **Zone A** retains 91–97% of registered values with zero values removed by the cleaning pipeline — cleanest signal in the system.
-- **Zone B** shows the most fragmented data: S06 and S05 retain only 57–62% of total timestamps, driven by a December 2025 connectivity outage confirmed by simultaneous gaps across all four zone sensors.
-- **S09 (Zone C, diagonal)** is the critical outlier: 71.94% of its values removed, leaving only 28% valid data and an IQR of 9,809 mm — orders of magnitude above all other sensors. Retained as a reference node only.
-
-> Full statistical analysis, displacement summaries, and movement range distributions in [ANALYSIS_REPORT.md](ANALYSIS_REPORT.md)
 
 ---
 
