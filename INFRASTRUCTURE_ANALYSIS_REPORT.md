@@ -57,13 +57,13 @@ Environmental variables recorded in parallel at site level: Temperature (°C), R
 
 A three-phase sequential cleaning pipeline was applied independently to each sensor (geometric filter → Chauvenet Criterion → IQR filter). Full methodology in [README.md](README.md).
 
-![Raw data summary — all sensors before cleaning](assets/tables/table_00_raw_data_summary.png)
+![Raw data summary — all sensors before cleaning](assets/table_00_raw_data_summary.png)
 *Raw timestamp count per sensor before any cleaning. Gaps in Zone B and S09 are visible here as reduced total counts.*
 
-![Valid records per sensor after cleaning](assets/tables/table_01_valid_records.png)
+![Valid records per sensor after cleaning](assets/table_01_valid_records.png)
 *Percentage of valid records retained after the full cleaning pipeline. Green = excellent (>90%), yellow = acceptable (>70%), red = reference only (<30%).*
 
-![Clean data statistical summary](assets/tables/table_02_clean_summary.png)
+![Clean data statistical summary](assets/table_02_clean_summary.png)
 *Key statistics per sensor on clean data: mean displacement, standard deviation, coefficient of variation, and IQR band. Relative displacement values (movement from structural minimum reference).*
 
 **Data quality summary by zone:**
