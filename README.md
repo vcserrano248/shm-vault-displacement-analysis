@@ -3,7 +3,7 @@
 
 > **Structural Health Monitoring (SHM) | Python Data Pipeline | Statistical Analysis | Environmental Correlation**
 
-*Full structural findings, zone-level diagnosis, and engineering conclusions in [INFRASTRUCTURE_INFRASTRUCTURE_ANALYSIS_REPORT.md](INFRASTRUCTURE_INFRASTRUCTURE_ANALYSIS_REPORT.md).*
+*Full structural findings, zone-level diagnosis, and engineering conclusions in [INFRASTRUCTURE_INFRASTRUCTURE_ANALYSIS_REPORT.md](https://github.com/vcserrano248/shm-vault-displacement-analysis/blob/main/INFRASTRUCTURE_ANALYSIS_REPORT.md).*
 
 ---
 
